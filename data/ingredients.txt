@@ -46,7 +46,6 @@ all beef hot dogs
 all potato purpos
 all purpose seasoning
 all purpose unbleached flour
-all-purpose flour
 allspice
 allspice berries
 almond butter
@@ -423,7 +422,6 @@ bittersweet baking chocolate
 bittersweet chocolate
 bittersweet chocolate chips
 blacan
-black
 black bass
 black bean and corn salsa
 black bean garlic sauce
@@ -1960,7 +1958,6 @@ evaporated cane juice
 evaporated low-fat 2% milk
 evaporated milk
 evaporated skim milk
-extra
 extra fine granulated sugar
 extra firm silken tofu
 extra firm tofu
@@ -2869,7 +2866,6 @@ hyssop
 i can't believ it' not butter! made with olive oil spread
 ibarra
 ic pop
-ice
 ice cream
 ice cream salt
 ice cubes
@@ -2973,7 +2969,6 @@ jerk seasoning mix
 jerusalem artichokes
 jicama
 jimmies
-juice
 juice concentrate
 jujube
 jumbo macaroni shells
@@ -3584,7 +3579,6 @@ mexican style 4 cheese blend
 mexicorn
 meyer lemon
 mezcal
-mi
 mian
 microgreens
 mie
@@ -3606,7 +3600,6 @@ milk chocolate pieces
 milkfish
 millet
 millet flour
-min
 minced beef
 minced chicken
 minced garlic
@@ -4060,7 +4053,6 @@ peperoncini
 peperoncino
 pepitas
 peppadews
-pepper
 pepper cheese
 pepper flakes
 pepper jack
@@ -4492,7 +4484,6 @@ raw tiger prawn
 razor clams
 ready-made pie crusts
 recipe crumbles
-red
 red anjou pears
 red apples
 red bartlett pears
@@ -4798,8 +4789,6 @@ salmon steaks
 salsa
 salsa verde
 salsify
-salt
-salt and ground black pepper
 salt free cajun creole seasoning
 salt free chili powder
 salt free herb seasoning
@@ -4843,7 +4832,6 @@ satsuma imo
 satsuma juice
 satsuma orange
 satsumas
-sauce
 sauce mix
 sauce tomato
 sauerkraut
@@ -5550,7 +5538,6 @@ tea bags
 tea cake
 tea leaves
 teardrop tomatoes
-teas
 teff
 teleme
 tempeh
@@ -5924,7 +5911,6 @@ wasabe
 wasabi
 wasabi paste
 wasabi powder
-water
 water chestnut powder
 water chestnuts
 water chestnuts drained and chopped
@@ -6008,7 +5994,6 @@ white rice vinegar
 white rum
 white sandwich bread
 white sesame seeds
-white sugar
 white tequila
 white truffle oil
 white tuna
