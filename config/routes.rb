@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'ingredients/search', to: 'ingredients#search'
+
+    get 'recipes/find_by_ingredients', to: 'recipes#find_by_ingredients'
+    get 'recipes/:recipe_id/instructions', to: 'recipes#instructions'
   end
 end
