@@ -7,6 +7,13 @@ module Api
       render json: recipes
     end
 
+    def instructions
+      recipe = Recipe.find(params[:id])
+      instructions = recipe.recipe_instructions
+
+      render json: instructions
+    end
+
     private
       def recipe_params
         params.permit(ingredient_ids: [])

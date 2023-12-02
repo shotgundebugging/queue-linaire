@@ -7,6 +7,7 @@ export function SearchIngredients() {
   const [ingredients, setIngredients] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
+  const [instructions, setInstructions] = useState([{}]);
 
   useEffect(() => {
     (async () => {
@@ -30,6 +31,12 @@ export function SearchIngredients() {
     const data = await response.json();
     setRecipes(data);
   };
+
+  const fetchInstructions = async (recipeId) => {
+    const response = await fetch(`/api/recipe/${recipeId}/instructions`);
+    const data = await response.json();
+    setInstructions(prevInstructions => ({ ...prevInstructions, [recipeId]: data }));
+  }
 
   const handleIngredientClick = (id) => {
     const ingredient = ingredients.find(ingredient => ingredient.id === id);
