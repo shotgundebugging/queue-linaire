@@ -1,5 +1,3 @@
-import React from 'react';
+import { SearchIngredients } from './SearchIngredients';
 
-export default () => {
-    return <h1>It's dinner time</h1>;
-}
+export default SearchIngredients;
