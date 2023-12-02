@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Ingredient } from './Ingredient';
+import { Recipe } from './Recipe';
 
 export function SearchIngredients() {
   const [query, setQuery] = useState('');
@@ -52,41 +54,24 @@ export function SearchIngredients() {
           placeholder="Search ingredients"
         />
         <ul>
-          {ingredients.map((ingredient) => (
-            <li key={ingredient.id}>
-              <button onClick={() => handleIngredientClick(ingredient.id)}>
-                ＋ {ingredient.name}
-              </button>
-            </li>
-          ))}
+        {ingredients.map((ingredient) => (
+          <Ingredient key={ingredient.id} ingredient={ingredient} handleClick={handleIngredientClick} />
+        ))}
         </ul>
       </div>
       {selectedIngredients.length > 0 && (
         <div>
           <h2>Your Ingredients</h2>
           <ul>
-            {selectedIngredients.map((ingredient) => (
-              <li key={ingredient.id}>
-                <button onClick={() => handleSelectedIngredientClick(ingredient.id)}>
-                  - {ingredient.name}
-                </button>
-              </li>
-            ))}
+          {selectedIngredients.map((ingredient) => (
+            <Ingredient key={ingredient.id} ingredient={ingredient} handleClick={handleSelectedIngredientClick} />
+          ))}
           </ul>
         </div>
       )}
-      {recipes.length > 0 && (
-      <div>
-        <h2>Matching recipes</h2>
-        {recipes.map((recipe) => (
-          <div key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt={recipe.title} style={{ maxHeight: '150px', width: 'auto', objectFit: 'contain' }} />
-          </div>
-        ))}
-      </div>
-      )}
+      {recipes.map((recipe) => (
+        <Recipe key={recipe.id} recipe={recipe} handleClick={fetchInstructions} instructions={instructions} />
+      ))}
     </div>
   );
 }
-
