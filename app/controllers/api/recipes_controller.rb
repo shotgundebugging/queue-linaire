@@ -14,9 +14,21 @@ module Api
       render json: instructions
     end
 
+    def search_by_title
+      recipes = Recipe.search_by_title(recipe_params[:q])
+
+      render json: recipes
+    end
+
+    def ingredients
+      ingredients = Recipe.find(params[:id]).ingredients.distinct
+
+      render json: ingredients
+    end
+
     private
       def recipe_params
-        params.permit(ingredient_ids: [])
+        params.permit(:q, ingredient_ids: [])
       end
   end
 end

@@ -10,5 +10,9 @@ class Recipe < ApplicationRecord
         .having('COUNT(DISTINCT ingredients.id) >= ?', ingredient_ids.length)
         .limit(10)
     end
+
+    def search_by_title(query)
+      where('LOWER(title) LIKE ?', "%#{query.downcase}%").limit(10) if query.present?
+    end
   end
 end

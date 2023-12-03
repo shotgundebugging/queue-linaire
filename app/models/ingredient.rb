@@ -4,13 +4,7 @@ class Ingredient < ApplicationRecord
 
   class << self
     def search_suggestions(query)
-      ingredients = if query.present?
-                      where('LOWER(name) LIKE ?', "#{query.downcase}%")
-                    else
-                      all
-                    end
-
-      ingredients.order(recipe_count: :desc).limit(10)
+      where('LOWER(name) LIKE ?', "#{query.downcase}%").order(recipe_count: :desc).limit(10) if query.present?
     end
   end
 end
