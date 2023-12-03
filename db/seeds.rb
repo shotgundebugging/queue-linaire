@@ -11,16 +11,14 @@
 
 require 'json'
 
-File.open('data/ingredients.txt', 'r') do |f|
-  f.each_line do |line|
-    Ingredient.find_or_create_by(name: line.strip)
-  end
+File.readlines('data/ingredients.txt').each do |line|
+  Ingredient.find_or_create_by(name: line.strip)
 end
 
 file = File.read('data/recipes-en.json')
 recipes_json = JSON.parse(file)
 
-ingredients = Ingredient.all
+ingredients = Ingredient.unscoped.all
 
 recipes_json.each do |recipe_json|
   recipe = Recipe.find_or_create_by(
@@ -39,8 +37,10 @@ recipes_json.each do |recipe_json|
       )
 
       matched_ingredients.each do |ingredient|
-        recipe_instruction.ingredients << ingredient
-        ingredient.increment!(:recipe_count)
+        unless recipe_instruction.ingredients.include?(ingredient)
+          recipe_instruction.ingredients << ingredient
+          ingredient.increment!(:recipe_count)
+        end
       end
     end
   end

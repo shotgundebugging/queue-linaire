@@ -23,3 +23,13 @@
  recipes                         | created_at            | timestamp without time zone
  recipes                         | updated_at            | timestamp without time zone
  schema_migrations               | version               | character varying
+
+                                       List of relations
+ Schema |                  Name                  | Type  |   Owner    |        Table
+--------+----------------------------------------+-------+------------+----------------------
+ public | ar_internal_metadata_pkey              | index | postgres   | ar_internal_metadata
+ public | index_recipe_instructions_on_recipe_id | index | postgres   | recipe_instructions
+ public | ingredients_pkey                       | index | postgres   | ingredients
+ public | recipe_instructions_pkey               | index | postgres   | recipe_instructions
+ public | recipes_pkey                           | index | postgres   | recipes
+ public | schema_migrations_pkey                 | index | postgres   | schema_migrations
