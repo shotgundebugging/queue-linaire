@@ -1,0 +1,25 @@
+           table_name            |      column_name      |          data_type
+---------------------------------+-----------------------+-----------------------------
+ ar_internal_metadata            | key                   | character varying
+ ar_internal_metadata            | value                 | character varying
+ ar_internal_metadata            | created_at            | timestamp without time zone
+ ar_internal_metadata            | updated_at            | timestamp without time zone
+ ingredients                     | id                    | bigint
+ ingredients                     | name                  | character varying
+ ingredients                     | recipe_count          | integer
+ ingredients                     | created_at            | timestamp without time zone
+ ingredients                     | updated_at            | timestamp without time zone
+ ingredients_recipe_instructions | ingredient_id         | bigint
+ ingredients_recipe_instructions | recipe_instruction_id | bigint
+ recipe_instructions             | id                    | bigint
+ recipe_instructions             | recipe_id             | bigint
+ recipe_instructions             | description           | character varying
+ recipe_instructions             | created_at            | timestamp without time zone
+ recipe_instructions             | updated_at            | timestamp without time zone
+ recipes                         | id                    | bigint
+ recipes                         | title                 | character varying
+ recipes                         | ratings               | double precision
+ recipes                         | image                 | character varying
+ recipes                         | created_at            | timestamp without time zone
+ recipes                         | updated_at            | timestamp without time zone
+ schema_migrations               | version               | character varying
