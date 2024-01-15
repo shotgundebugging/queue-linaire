@@ -1,8 +1,5 @@
 # README
 
-Hello PennyLane team,
-This is Mircea Mare's repo for the fullstack test assignment.
-
 # Stack used
 - Rails 7.1.2
 - Ruby 3.2.2
